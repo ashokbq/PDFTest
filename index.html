@@ -1,46 +1,59 @@
 <!doctype html>
-<html>
-
-<head>
-  <!-- In production, only one script (pdf.js) is necessary -->
-  <!-- In production, change the content of PDFJS.workerSrc below -->
-  <script type="text/javascript" src="src/network.js"></script>
-  <script type="text/javascript" src="src/chunked_stream.js"></script>
-  <script type="text/javascript" src="src/pdf_manager.js"></script>
-  <script type="text/javascript" src="src/core.js"></script>
-  <script type="text/javascript" src="src/util.js"></script>
-  <script type="text/javascript" src="src/api.js"></script>
-  <script type="text/javascript" src="src/canvas.js"></script>
-  <script type="text/javascript" src="src/obj.js"></script>
-  <script type="text/javascript" src="src/annotation.js"></script>
-  <script type="text/javascript" src="src/function.js"></script>
-  <script type="text/javascript" src="src/charsets.js"></script>
-  <script type="text/javascript" src="src/cidmaps.js"></script>
-  <script type="text/javascript" src="src/colorspace.js"></script>
-  <script type="text/javascript" src="src/crypto.js"></script>
-  <script type="text/javascript" src="src/evaluator.js"></script>
-  <script type="text/javascript" src="src/fonts.js"></script>
-  <script type="text/javascript" src="src/glyphlist.js"></script>
-  <script type="text/javascript" src="src/image.js"></script>
-  <script type="text/javascript" src="src/metrics.js"></script>
-  <script type="text/javascript" src="src/parser.js"></script>
-  <script type="text/javascript" src="src/pattern.js"></script>
-  <script type="text/javascript" src="src/stream.js"></script>
-  <script type="text/javascript" src="src/worker.js"></script>
-  <script type="text/javascript" src="external/jpgjs/jpg.js"></script>
-  <script type="text/javascript" src="src/jpx.js"></script>
-  <script type="text/javascript" src="src/jbig2.js"></script>
-
-  <script type="text/javascript">
-    // Specify the main script used to create a new PDF.JS web worker.
-    // In production, change this to point to the combined `pdf.js` file.
-    PDFJS.workerSrc = 'src/worker_loader.js';
-  </script>
-  <script type="text/javascript" src="hello.js"></script>
-</head>
-
-<body>
-  <canvas id="the-canvas" style="border:1px solid black;"/>
-</body>
-
-</html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<style type="text/css" media="screen">
+				html, body	{ height:100%; }
+				body { margin:0; padding:0; overflow:auto; }
+				#flashContent { display:none; }
+			</style>
+			<link rel="stylesheet" type="text/css" href="css/flexpaper.css" />
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			<script type="text/javascript" src="js/jquery.extensions.min.js"></script>
+			<script type="text/javascript" src="js/flexpaper.js"></script>
+			<script type="text/javascript" src="js/flexpaper_handlers.js"></script>
+		</head>
+		<body>
+		<div id="documentViewer" class="flexpaper_viewer" style="position:absolute;width:100%;height:100%;background-color:#222222"></div>
+		<script type="text/javascript">
+			$('#documentViewer').FlexPaperViewer(
+						                  	 { config : {
+														   
+							                     IMGFiles : 'docs/IRA e-Bulletin Issue 4.pdf_{page}.png',
+							                     JSONFile : 'docs/IRA e-Bulletin Issue 4.pdf_{page}.js',
+							                     PDFFile : 'docs/IRA e-Bulletin Issue 4_[*,2].pdf',
+							                     ThumbIMGFiles : 'docs/IRA e-Bulletin Issue 4.pdf_{page}_thumb.png',
+														   						
+							                     Scale : 0.6,
+							                     ZoomTransition : 'easeOut',
+							                     ZoomTime : 0.5,
+							                     ZoomInterval : 0.1,
+							                     FitPageOnLoad : true,
+							                     FitWidthOnLoad : false,
+							                     AutoAdjustPrintSize : true,
+							                     PrintPaperAsBitmap : false,
+							                     FullScreenAsMaxWindow : false,
+							                     ProgressiveLoading : false,
+							                     MinZoomSize : 0.3,
+							                     MaxZoomSize : 5,
+							                     SearchMatchAll : true,
+							                     InitViewMode : 'Zine',
+							                     RenderingOrder : 'html5,HTML5',
+							                     StartAtPage : 1,
+														   						
+							                     ViewModeToolsVisible : true,
+							                     ZoomToolsVisible : true,
+							                     NavToolsVisible : true,
+							                     CursorToolsVisible : true,
+							                     SearchToolsVisible : true,
+														   						
+							                     UIConfig : 'UIConfig_IRA e-Bulletin Issue 4.pdf.xml',
+							                     WMode : 'transparent',
+														   						
+							                     key : '#V2Zze2BFW1peQRhwB0lFV1VaZg',
+							                     localeChain: 'en_US'
+							                   }}
+							            );
+		</script>
+		</body>
+	</html>
