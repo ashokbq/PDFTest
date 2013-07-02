@@ -1,58 +1,147 @@
-<!doctype html>
-	<html>
-		<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			<style type="text/css" media="screen">
-				html, body	{ height:100%; }
-				body { margin:0; padding:0; overflow:auto; }
-				#flashContent { display:none; }
-			</style>
-			<link rel="stylesheet" type="text/css" href="css/flexpaper.css" />
-			<script type="text/javascript" src="js/jquery.min.js"></script>
-			<script type="text/javascript" src="js/jquery.extensions.min.js"></script>
-			<script type="text/javascript" src="js/flexpaper.js"></script>
-			<script type="text/javascript" src="js/flexpaper_handlers.js"></script>
-		</head>
-		<body>
-		<div id="documentViewer" class="flexpaper_viewer" style="position:absolute;width:100%;height:100%;background-color:#222222"></div>
-		<script type="text/javascript">
-			$('#documentViewer').FlexPaperViewer(
-						                  	 { config : {
-														   
-							                     IMGFiles : 'docs/MDS-Kannada.pdf_{page}.png',
-							                     JSONFile : 'docs/MDS-Kannada.pdf_{page}.js',
-							                     ThumbIMGFiles : 'docs/MDS-Kannada.pdf_{page}_thumb.png',
-														   						
-							                     Scale : 0.6,
-							                     ZoomTransition : 'easeOut',
-							                     ZoomTime : 0.5,
-							                     ZoomInterval : 0.1,
-							                     FitPageOnLoad : true,
-							                     FitWidthOnLoad : false,
-							                     AutoAdjustPrintSize : true,
-							                     PrintPaperAsBitmap : false,
-							                     FullScreenAsMaxWindow : false,
-							                     ProgressiveLoading : false,
-							                     MinZoomSize : 0.3,
-							                     MaxZoomSize : 10,
-							                     SearchMatchAll : true,
-							                     InitViewMode : 'Portrait',
-							                     RenderingOrder : 'html,html',
-							                     StartAtPage : 1,
-														   						
-							                     ViewModeToolsVisible : true,
-							                     ZoomToolsVisible : true,
-							                     NavToolsVisible : true,
-							                     CursorToolsVisible : true,
-							                     SearchToolsVisible : true,
-														   						
-							                     UIConfig : 'UIConfig_MDS-Kannada.pdf.xml',
-							                     WMode : 'transparent',
-														   						
-							                     key : '#V2Zze2BFW1peQRhwB0lFV1VaZg',
-							                     localeChain: 'en_US'
-							                   }}
-							            );
-		</script>
-		</body>
-	</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML5 Video</title>
+<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery.mobile-1.3.1.min.js"></script>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.ui-panel {
+	width: auto;
+	min-height:768px !important;
+}
+.ui-content {
+	padding: 0px !important;
+}
+.ui-bar-c, .ui-body-b, .ui-overlay-b {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#2d2d2d));
+	background-image: -webkit-linear-gradient(#444, #2d2d2d);
+	background-image: -moz-linear-gradient(#444, #2d2d2d);
+	background-image: -ms-linear-gradient(#444, #2d2d2d);
+	background-image: -o-linear-gradient(#444, #2d2d2d);
+	background-image: linear-gradient(#444, #2d2d2d);
+}
+.ui-btn-up-a {
+	background: none repeat scroll 0 0 transparent !important;
+}
+</style>
+<script>
+$(document).ready(function(){
+	
+	 $('#pdfbtn1').click(function() {
+  $("#pdf1").show();
+  $("#pdf2").hide();
+   $("#pdf3").hide();
+    $("#pdf4").hide();
+	 $("#pdf5").hide();
+	  $("#pdf6").hide();
+	   $("#pdf7").hide();
+	    $("#pdf8").hide();
+	 }); 
+	  $('#pdfbtn2').click(function() {
+  $("#pdf2").show();
+  $("#pdf1").hide();
+   $("#pdf3").hide();
+    $("#pdf4").hide();
+	 $("#pdf5").hide();
+	  $("#pdf6").hide();
+	   $("#pdf7").hide();
+	    $("#pdf8").hide();
+	 }); 
+
+	 $('#pdfbtn3').click(function() {
+  $("#pdf1").hide();
+  $("#pdf2").hide();
+   $("#pdf3").show();
+    $("#pdf4").hide();
+	 $("#pdf5").hide();
+	  $("#pdf6").hide();
+	   $("#pdf7").hide();
+	    $("#pdf8").hide();
+	 }); 
+	  $('#pdfbtn4').click(function() {
+  $("#pdf1").hide();
+  $("#pdf2").hide();
+   $("#pdf3").hide();
+    $("#pdf4").show();
+	 $("#pdf5").hide();
+	  $("#pdf6").hide();
+	   $("#pdf7").hide();
+	    $("#pdf8").hide();
+	 }); 
+	  $('#pdfbtn5').click(function() {
+  $("#pdf1").hide();
+  $("#pdf2").hide();
+   $("#pdf3").hide();
+    $("#pdf4").hide();
+	 $("#pdf5").show();
+	  $("#pdf6").hide();
+	   $("#pdf7").hide();
+	    $("#pdf8").hide();
+	 }); 
+	  $('#pdfbtn6').click(function() {
+  $("#pdf1").hide();
+  $("#pdf2").hide();
+   $("#pdf3").hide();
+    $("#pdf4").hide();
+	 $("#pdf5").hide();
+	  $("#pdf6").show();
+	   $("#pdf7").hide();
+	    $("#pdf8").hide();
+	 }); 
+	  $('#pdfbtn7').click(function() {
+  $("#pdf1").hide();
+  $("#pdf2").hide();
+   $("#pdf3").hide();
+    $("#pdf4").hide();
+	 $("#pdf5").hide();
+	  $("#pdf6").hide();
+	   $("#pdf7").show();
+	    $("#pdf8").hide();
+	 }); 
+	 /* $('#pdfbtn8').click(function() {
+	  $("#pdf1").hide();
+	  $("#pdf2").hide();
+	   $("#pdf3").hide();
+		$("#pdf4").hide();
+		 $("#pdf5").hide();
+		  $("#pdf6").hide();
+		   $("#pdf7").hide();
+			$("#pdf8").show();
+	 }); */
+});
+</script>
+</head>
+
+<body>
+<div data-role="page"  class="jqm-demos ui-responsive-panel panelcontent">
+  <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" style="width: 272px;">
+      <li><a href="Allergic Rhinitis_Ver 02.pdf" rel="external" id="pdfbtn1">Allergic Rhinitis_Ver</a></li>
+      <li><a href="Asthma_Ver 02.pdf" rel="external" id="pdfbtn2">Asthma_Ver 02</a> </li>
+      <li><a href="COPD_Ver 02.pdf" rel="external" id="pdfbtn3">COPD_Ver 02</a> </li>
+      <li><a href="Diet_Ver 02.pdf" rel="external" id="pdfbtn4">Diet_Ver 02</a> </li>
+      <li><a href="How to use MDI_Ver 04.pdf" rel="external" id="pdfbtn5">How to use MDI_Ver 04</a> </li>
+      <li><a href="How to use MDI_Ver 04a.pdf" rel="external" id="pdfbtn6">How to use MDI_Ver 04a</a> </li>
+      <li><a href="Respiratory Exercises_Ver 02.pdf" rel="external" id="pdfbtn7">Respiratory Exercises_Ver 02</a> </li>
+    <!--  <li><a href="17_Priligy (dapoxetine)_SPC.pdf" rel="external" id="pdfbtn8">17_Priligy® (dapoxetine)_SPC</a> </li>-->
+    </ul>
+  </div>
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+    <h1 class="ui-title" role="heading" aria-level="1"><a id="topmenu" href="#nav-panel" data-role="button" data-position="right" class="ui-bar-a ui-btn-right"> Select PDF</a> </h1>
+  </div>
+  <div>
+  </div>
+  <!--  <embed src="#" id="embedtest"/> --> 
+  <!-- /content --> 
+  
+</div>
+</body>
+</html>
